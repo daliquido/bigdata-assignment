@@ -28,4 +28,4 @@ db.messages.aggregate([
   {
     $sort: { conversion_rate_percent: -1 }
   }
-]);
+]).forEach(doc => printjson(doc));
