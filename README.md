@@ -1,46 +1,55 @@
 # Big Data Assignment
 
-This repository contains the implementation, scripts, screenshots, outputs, and final report for the big data assignment.
+This repository contains the full implementation and report for a Big Data assignment focused on modeling, loading, querying, and benchmarking an e-commerce dataset using three different database paradigms:
 
-## Structure
+- **PostgreSQL** for the relational model
+- **MongoDB** for the document-oriented model
+- **Neo4j** for the graph model
 
-- `scripts/` : SQL, MongoDB, Neo4j, and Python scripts
-- `screenshots/` : screenshots of execution and results
-- `output/` : experimental outputs and performance results
-- `report.pdf` : final report
+The project includes database schemas, data cleaning scripts, loading scripts, analytical queries, benchmark outputs, screenshots, and the final report.
 
-## Dataset
-The dataset should be placed in:
+---
 
-data/f7/
+## Project Objective
 
-The folder must contain:
+The goal of this assignment is to compare how different database systems handle the same analytical workload. The dataset was modeled and queried in PostgreSQL, MongoDB, and Neo4j, then benchmarked to evaluate performance differences across:
 
-events.csv
-campaigns.csv
-messages.csv
-friends.csv
-client_first_purchase_date.csv
+1. **Campaign effectiveness analysis**
+2. **Product recommendation analysis**
+3. **Product category search**
 
-## Scripts
+The report also discusses modeling decisions, benchmarking methodology, and the strengths and weaknesses of each database paradigm.
 
-scripts/clean_data.py  
-Cleans the raw CSV files.
+---
 
-scripts/load_data_psql.sql  
-Creates PostgreSQL tables and loads data.
+## Repository Structure
 
-scripts/load_data_mongodb.js  
-Loads data into MongoDB.
-
-scripts/load_data_graph.cypher  
-Loads data into Neo4j/Memgraph.
-
-## Diagrams
-
-screenshots/
-Contains the database models for:
-
-PostgreSQL
-MongoDB
-Neo4j
+```text
+bigdata-assignment/
+├── scripts/
+│   ├── clean_data.py
+│   ├── load_data_psql.sql
+│   ├── load_data_mongodb.js
+│   ├── load_data_graph.cypher
+│   ├── q1.sql
+│   ├── q2.sql
+│   ├── q3.sql
+│   ├── q1.js
+│   ├── q2.js
+│   ├── q3.js
+│   ├── q1.cypher
+│   ├── q2.cypher
+│   └── q3.cypher
+│
+├── screenshots/
+│   ├── psql_model.png
+│   ├── mongodb_model.png
+│   ├── neo4j_model.png
+│   └── query_result_screenshots...
+│
+├── output/
+│   └── benchmarking_results...
+│
+├── bigdata_report.pdf
+├── .gitignore
+└── README.md
